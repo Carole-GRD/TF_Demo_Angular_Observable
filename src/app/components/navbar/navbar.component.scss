@@ -1,0 +1,22 @@
+nav {
+    width: 100vw;
+    height: 10vh;
+    background-color: lightslategray;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 0 1rem;
+}
+
+.pastille {
+    color: chocolate;
+}

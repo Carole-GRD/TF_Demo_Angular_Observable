@@ -1,0 +1,20 @@
+<div class="cart">
+    <h2>Mon panier : </h2>
+    <table>
+        <thead>
+            <th>Nom</th>
+            <th>Quantité</th>
+            <th>Prix</th>
+            <th>Actions</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of listPanier">
+                <td>{{ product.name }}</td>
+                <td>x {{ product.quantity }}</td>
+                <td>{{ product.price }} €</td>
+                <td><button (click)="removeFromCart(product.id)">🚮</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Prix total : {{ prixTotal }} €</p>
+</div>
