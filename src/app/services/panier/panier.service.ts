@@ -11,12 +11,15 @@ export class PanierService {
   private _panier : ProductPanier[] = [];
   private _prixTotal : number = 0;
 
+  // Celui qui va nous permettre d'émettre les changements de valeurs
   private _panier$ : BehaviorSubject<ProductPanier[]> = new BehaviorSubject<ProductPanier[]>(this._panier)
   private _prixTotal$ : BehaviorSubject<number> = new BehaviorSubject<number>(this._prixTotal)
 
+  // Celui qui sera accessible dans les différents components (on peut juste s'abonner dessus)
   panier$ : Observable<ProductPanier[]> = this._panier$.asObservable()
   prixTotal$ : Observable<number> = this._prixTotal$.asObservable()
 
+  
   constructor() { }
 
 
